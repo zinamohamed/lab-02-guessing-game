@@ -13,6 +13,8 @@ let guessLeft = 4;
 
 guessSpan.textContent = `You have 4 guesses. Good Luck!`;
 
+resultsString.style.visibility = 'hidden';
+
 
 
 
@@ -24,6 +26,8 @@ guessButton.addEventListener('click', () => {
     guessLeft--;
     
     guessSpan.textContent = `You have ${guessLeft} remaining guesses!`;
+
+    resultsString.style.visibility = 'visible';
 
     
     let userGuess = (Number(guessNumber.value));
@@ -38,30 +42,38 @@ guessButton.addEventListener('click', () => {
     }
     else {
         resetButton.style.visibility = 'visible';
-        guessSpan.textContent = '';
-        resultsString.textContent = 'Bullseye! You are a winner baby!';
+        guessSpan.style.visibility = 'hidden';
+        resultsString.textContent = 'By the powers that be! You read my mind!';
+        resultsString.style.backgroundImage = "url('https://media4.giphy.com/media/xT9IgzvnOyNDYnxeHS/giphy.gif')";
         guessButton.style.visibility = 'hidden';
+        guessNumber.style.visibility = 'hidden';
     }
 
     if (guessLeft === 0 && finalNumber === 1) {
-        resultsString.textContent = 'Sorry, you have no more guesses.';
-        guessSpan.textContent = '';
+        resultsString.textContent = 'Sorry, you have no more guesses left.';
+        guessSpan.style.visibility = 'hidden';
         guessButton.style.visibility = 'hidden';
         resetButton.style.visibility = 'visible';
+        guessNumber.style.visibility = 'hidden';
         
     }
 
     if (guessLeft === 0 && finalNumber === -1) {
-        resultsString.textContent = 'Sorry, you have no more guesses.';
-        guessSpan.textContent = '';
+        resultsString.textContent = 'Sorry, you have no more guesses left.';
+        guessSpan.style.visibility = 'hidden';
         guessButton.style.visibility = 'hidden';
         resetButton.style.visibility = 'visible';
+        guessNumber.style.visibility = 'hidden';
         
+    }
+
+    if (userGuess > 20) {
+        resultsString.textContent = 'Spirit only wants you to pick numbers 1-20!'; 
     }
     
 });
 
-
+console.log(correctNumber);
 
 
 
