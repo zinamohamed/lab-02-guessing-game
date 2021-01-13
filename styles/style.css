@@ -8,7 +8,7 @@ body {
     background-color: var(--color2);
     background-image: url('https://cdn.dribbble.com/users/1008875/screenshots/4945459/fortune-teller.png?compress=1&resize=800x600');                     
     background-repeat:no-repeat;
-    background-position:center center;
+    background-position: center center;
     
 }
 
@@ -33,10 +33,6 @@ main {
     margin: 20px;
     display:flex;
     font-family: 'Cinzel', serif;
-    margin-bottom: 20px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
 }
 
 
@@ -99,6 +95,24 @@ input {
     
 }
 
+.play-now {
+    border: none;
+    background-color: white;
+    color: #6930c3;
+    outline:none;
+    width: 140px;
+    padding: 15px;
+    border: 1px solid #457b9d;
+    font-family: 'Cinzel', serif;
+    border-radius: 50px;
+    font-size: 1em;
+    text-decoration: none;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+
 .reset-button {
     visibility: hidden;
     margin-top: 100px;
@@ -140,10 +154,8 @@ button:hover {
     padding: 0px;
     line-height: 2em;
     border-radius: 20px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    
+    
  }
 
  header {
@@ -155,6 +167,8 @@ button:hover {
     text-align: center;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
  }
 
 
