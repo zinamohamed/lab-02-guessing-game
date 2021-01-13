@@ -7,6 +7,11 @@ const resultsString = document.getElementById('barometer');
 const guessSpan = document.getElementById('remaining-guesses');
 const guessNumber = document.getElementById('guess-number');
 const gamePrompt = document.getElementById('pick');
+const startGame = document.getElementById('main-section');
+const startButton = document.getElementById('play-now');
+
+startGame.style.visibility = 'hidden';
+
 
 
 let correctNumber = (Number(Math.ceil(Math.random() * 20)));
@@ -25,6 +30,13 @@ resultsString.style.visibility = 'hidden';
 
 
 // initialize state
+
+startButton.addEventListener('click', () => {
+    startGame.style.visibility = 'visible';
+    startButton.style.visibility = 'hidden';
+
+});
+
 guessButton.addEventListener('click', () => {
     
     guessLeft--;
@@ -32,6 +44,7 @@ guessButton.addEventListener('click', () => {
     guessSpan.textContent = `You have ${guessLeft} remaining guesses!`;
 
     resultsString.style.visibility = 'visible';
+    
     
     
     
