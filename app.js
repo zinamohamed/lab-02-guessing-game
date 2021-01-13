@@ -6,13 +6,16 @@ const resetButton = document.getElementById('reset-button');
 const resultsString = document.getElementById('barometer');
 const guessSpan = document.getElementById('remaining-guesses');
 const guessNumber = document.getElementById('guess-number');
+const gamePrompt = document.getElementById('pick');
 
 
 let correctNumber = (Number(Math.ceil(Math.random() * 20)));
 
 let guessLeft = 4;
 
+gamePrompt.textContent = 'Through my crystal I see a number 1 through 20. Guess it below, and I will grant you wishes aplenty!';
 guessSpan.textContent = `You have 4 guesses. Good Luck!`;
+
 
 resultsString.style.visibility = 'hidden';
 
@@ -30,7 +33,7 @@ guessButton.addEventListener('click', () => {
 
     resultsString.style.visibility = 'visible';
     
-
+    
     
     let userGuess = (Number(guessNumber.value));
     let finalNumber = compareNumbers(userGuess, correctNumber);
@@ -47,6 +50,7 @@ guessButton.addEventListener('click', () => {
         guessSpan.style.visibility = 'hidden';
         resultsString.textContent = 'By the powers that be! You read my mind!';
         resultsString.style.backgroundImage = "url('https://media4.giphy.com/media/xT9IgzvnOyNDYnxeHS/giphy.gif')";
+        gamePrompt.textContent = 'Make any wish and I will see it through, but this will only work if you believe it to be true!';
         guessButton.style.visibility = 'hidden';
         guessNumber.style.visibility = 'hidden';
     }
@@ -54,6 +58,7 @@ guessButton.addEventListener('click', () => {
     if (guessLeft === 0 && finalNumber === 1) {
         resultsString.textContent = 'I am afraid you have no more guesses left.';
         guessSpan.style.visibility = 'hidden';
+        gamePrompt.textContent = 'Looks like I can not grant you any wishes my friend, but we can try once more if you play again!';
         guessButton.style.visibility = 'hidden';
         resetButton.style.visibility = 'visible';
         guessNumber.style.visibility = 'hidden';
@@ -62,6 +67,7 @@ guessButton.addEventListener('click', () => {
 
     if (guessLeft === 0 && finalNumber === -1) {
         resultsString.textContent = 'I am afraid you have no more guesses left.';
+        gamePrompt.textContent = 'Looks like I can not grant you any wishes my friend, but we can try once more if you play again!';
         guessSpan.style.visibility = 'hidden';
         guessButton.style.visibility = 'hidden';
         resetButton.style.visibility = 'visible';
@@ -75,7 +81,7 @@ guessButton.addEventListener('click', () => {
     
 });
 
-console.log(correctNumber);
+
 
 
 
