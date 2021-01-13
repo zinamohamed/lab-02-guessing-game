@@ -7,6 +7,7 @@ const resultsString = document.getElementById('barometer');
 const guessSpan = document.getElementById('remaining-guesses');
 const guessNumber = document.getElementById('guess-number');
 
+
 let correctNumber = (Number(Math.ceil(Math.random() * 20)));
 
 let guessLeft = 4;
@@ -28,17 +29,18 @@ guessButton.addEventListener('click', () => {
     guessSpan.textContent = `You have ${guessLeft} remaining guesses!`;
 
     resultsString.style.visibility = 'visible';
+    
 
     
     let userGuess = (Number(guessNumber.value));
     let finalNumber = compareNumbers(userGuess, correctNumber);
     
     if (finalNumber === 1) {
-        resultsString.textContent = 'Too high, try again!'; 
+        resultsString.textContent = 'Sprit says too high, try again!'; 
 
     }
     else if (finalNumber === - 1) {
-        resultsString.textContent = 'Too Low, try again!';
+        resultsString.textContent = 'Spirit says too Low, try again!';
     }
     else {
         resetButton.style.visibility = 'visible';
@@ -50,7 +52,7 @@ guessButton.addEventListener('click', () => {
     }
 
     if (guessLeft === 0 && finalNumber === 1) {
-        resultsString.textContent = 'Sorry, you have no more guesses left.';
+        resultsString.textContent = 'I am afraid you have no more guesses left.';
         guessSpan.style.visibility = 'hidden';
         guessButton.style.visibility = 'hidden';
         resetButton.style.visibility = 'visible';
@@ -59,7 +61,7 @@ guessButton.addEventListener('click', () => {
     }
 
     if (guessLeft === 0 && finalNumber === -1) {
-        resultsString.textContent = 'Sorry, you have no more guesses left.';
+        resultsString.textContent = 'I am afraid you have no more guesses left.';
         guessSpan.style.visibility = 'hidden';
         guessButton.style.visibility = 'hidden';
         resetButton.style.visibility = 'visible';
@@ -68,7 +70,7 @@ guessButton.addEventListener('click', () => {
     }
 
     if (userGuess > 20) {
-        resultsString.textContent = 'Spirit only wants you to pick numbers 1-20!'; 
+        resultsString.textContent = 'Spirit only wants you to pick a number 1-20!'; 
     }
     
 });

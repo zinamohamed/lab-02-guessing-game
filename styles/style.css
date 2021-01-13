@@ -14,25 +14,29 @@ body {
 
 main {
     display: flex;
-    justify-content: center;
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
-.main-content {
+.main-section {
     display:flex;
     flex-direction: column;
-    padding: 20px;
+    justify-content: center;
+    padding: 50px;
     margin: 20px;
 }
 
 .title {
     font-size: 3em;
     color:#6930c3;
-    padding: 20px;
     margin: 20px;
     display:flex;
-    justify-content: flex-start;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -42,23 +46,28 @@ main {
     padding: 10px;
     margin: 10px;
     background: white;
-    border: 1px solid #6930c3;
+    border: 1px solid #457b9d;
     border-radius: 20px;
+    font-family: 'Cinzel', serif;
+    
+    
     
 }
 
 .barometer {
     font-size: 1.5em;
-    color:#6930c3;
+    color:#457b9d;
     padding: 5px;
     margin-top: 50px;
     margin-bottom: 10px;
     background: white;
-    border: 1px solid #6930c3;
+    border: 1px solid #457b9d;
     border-radius: 20px;
     background-repeat:no-repeat;
     background-position:center center;
     background-size: cover;
+    font-family: 'Cinzel', serif;
+    
 }
 
 input {
@@ -67,10 +76,11 @@ input {
     font-size: 2em;
     color: #6930c3;
     outline:none;
-    font-family: 'VT323', monospace;
+    font-family: 'Cinzel', serif;
     border-radius: 50px;
     margin-top: 30px;
     width: 200px;
+    
 }
 
 
@@ -82,32 +92,66 @@ input {
     outline:none;
     width: 140px;
     padding: 5px;
-    border: 1px solid #6930c3;
-    font-family: 'VT323', monospace;
+    border: 1px solid #457b9d;
+    font-family: 'Cinzel', serif;
     border-radius: 50px;
     font-size: 1em;
+    
 }
 
 .reset-button {
     visibility: hidden;
-    margin-top: 40px;
+    margin-top: 100px;
     border: none;
     background-color: white;
     color: #6930c3;
     outline:none;
     width: 140px;
-    padding: 5px;
-    border: 1px solid #6930c3;
-    font-family: 'VT323', monospace;
+    padding: 15px;
+    border: 1px solid #457b9d;
+    font-family: 'Cinzel', serif;
     border-radius: 50px;
     font-size: 1em;
     text-decoration: none;
+    
 }
 
+.reset-area{
+    margin-top: 80px;
+}
 
 button:hover {
     transform: skew(-10deg);
+    background-image: url('https://media4.giphy.com/media/xT9IgzvnOyNDYnxeHS/giphy.gif');
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size: cover;
       
+ }
+
+.pick {
+    font-size: 1em;
+    color:#6930c3;
+    font-family: 'Orbitron', sans-serif;
+   ;
+    width:800px;
+    text-align: center;
+    font-weight: 200;
+    padding: 0px;
+    line-height: 2em;
+    border-radius: 20px;
+    display: flex;
+ }
+
+ header {
+    background: white;
+    background-image: url('https://media4.giphy.com/media/xT9IgzvnOyNDYnxeHS/giphy.gif');
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
  }
 
 
