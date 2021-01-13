@@ -1,103 +1,166 @@
 
 body {
-    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
-/* 
-    /* --color1: hsla(45, 86%, 83%, 1);
-    --color2: hsla(135, 65%, 98%, 1);
-    --color3: hsla(315, 37%, 86%, 1);
-    --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
-    
-    --header-height: 80px;
-    --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
-    --gutter: 30px;
-    --footer-height: 25px;
-    
-    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'VT323', monospace;
     background-color: var(--color2);
+    background-image: url('https://cdn.dribbble.com/users/1008875/screenshots/4945459/fortune-teller.png?compress=1&resize=800x600');                     
+    background-repeat:no-repeat;
+    background-position:center center;
+    
 }
 
 main {
     display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.main-section {
+    display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    padding: 50px;
+    margin: 20px;
 }
 
-section {
-    background-color: var(--color5);
-    width: 1000px;
-    max-width: 80%;
+.title {
+    font-size: 3em;
+    color:#6930c3;
+    margin: 20px;
+    display:flex;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 20px;
+    align-items: center;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+}
+
+
+.remaining-guesses {
+    font-size: 1.5em;
+    color:#6930c3;
+    padding: 10px;
+    margin: 10px;
+    background: white;
+    border: 1px solid #457b9d;
+    border-radius: 20px;
+    font-family: 'Cinzel', serif;
+    
+    
+    
+}
+
+.barometer {
+    font-size: 1.5em;
+    color:#457b9d;
+    padding: 5px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    background: white;
+    border: 1px solid #457b9d;
+    border-radius: 20px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size: cover;
+    font-family: 'Cinzel', serif;
+    
+}
+
+input {
+    text-align: center;
+    border: 1px solid #457b9d;
+    font-size: 2em;
+    color: #6930c3;
+    outline:none;
+    font-family: 'Cinzel', serif;
+    border-radius: 50px;
+    margin-top: 30px;
+    width: 200px;
+    
+}
+
+
+.submit-button {
+    margin-top: 20px;
+    border: none;
+    background-color: white;
+    color: #6930c3;
+    outline:none;
+    width: 140px;
+    padding: 5px;
+    border: 1px solid #457b9d;
+    font-family: 'Cinzel', serif;
+    border-radius: 50px;
+    font-size: 1em;
+    
+}
+
+.reset-button {
+    visibility: hidden;
+    margin-top: 100px;
+    border: none;
+    background-color: white;
+    color: #6930c3;
+    outline:none;
+    width: 140px;
+    padding: 15px;
+    border: 1px solid #457b9d;
+    font-family: 'Cinzel', serif;
+    border-radius: 50px;
+    font-size: 1em;
+    text-decoration: none;
+    
+}
+
+.reset-area{
+    margin-top: 80px;
+}
+
+button:hover {
+    transform: skew(-10deg);
+    background-image: url('https://media4.giphy.com/media/xT9IgzvnOyNDYnxeHS/giphy.gif');
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size: cover;
+      
+ }
+
+.pick {
+    font-size: 1em;
+    color:#6930c3;
+    font-family: 'Orbitron', sans-serif;
+   ;
+    width:800px;
+    text-align: center;
+    font-weight: 200;
+    padding: 0px;
+    line-height: 2em;
+    border-radius: 20px;
+    display: flex;
+ }
+
+ header {
+    background: white;
+    background-image: url('https://media4.giphy.com/media/xT9IgzvnOyNDYnxeHS/giphy.gif');
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size: cover;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
-}
-
-header {
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    height: var(--header-height);
-    box-shadow: var(--shadow);
-}
-
-footer {
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
-}
-
-
-h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-.gutter-right {
-    margin-right: 20px;
-}
-
-.main-logo {
-    animation: pulse 5s infinite ease-in-out;
-}
-
-header img {
-    height: var(--header-height);
-}
+ }
 
 
 
-content {
-    width: 80%;
-}
-
-p {
-    margin: var(--gutter);
-}
   
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
-}
+
+  
+ 
+
   
   @keyframes pulse {
     20% {
